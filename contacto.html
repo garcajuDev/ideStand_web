@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">	
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9KjyQD6ydID00HJbmLa3BBejq200LqCI&callback=myMap"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/val.js"></script>
+	<title>IDEstand</title>
+</head>
+<body>
+	<header>
+		<div class="main_header">
+  		<img src="img/logoBig.png" alt="ideLogo">
+  		<h2>Diseño y montaje de stands para ferias y congresos</h2>
+		</div>
+	</header>
+	<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-ligh" id="nav_header">
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+	  	<div class="collapse navbar-collapse" id="navbarNav">
+	    	<ul class="navbar-nav">
+	      	<li class="nav-item">
+	        	<a class="nav-link" href="index.html">ideHome</a>
+	     		</li>
+	      	<li class="nav-item">
+	        	<a class="nav-link" href="#">Portfolio</a>
+	      	</li>
+	      	<li class="nav-item">
+	        	<a class="nav-link" href="#">Servicios</a>
+	      	</li>
+	      	<li class="nav-item">
+	        	<a class="nav-link" href="#">Contacto</a>
+	      	</li>
+	      	<li class="nav-item">
+	        	<a class="nav-link" href="#">Nosotros</a>
+	      	</li>
+	    	</ul>
+	  	</div>
+	</nav>
+	<div class="container">
+		<div id="mapFooter" class="contacto-maps"></div>
+
+		<ul class="form">
+			 <li class="validated" id="username_li">
+		       	<label for="r_username">Username:</label>
+		       	<div id="username_img"></div>
+		       		<input class="validated" name="username" id="username" type="text" maxlength="20" value=""  />
+		       	<div id="username_msg"></div>
+			</li>
+			<li class="validated" id="password_li">
+		       	<label for="r_password">Password:</label>
+		       	<div id="password_img"></div>
+		       		<input name="password" id="password" type="password" maxlength="20"  />
+		       	<div id="password_msg"></div>
+		 	</li>
+		    <li id="password_copy_li">
+		        your password is <input id="password_copy" />
+		    </li>
+		    <li id="confirmpass_li">
+		    	<label for="r_confirmpass">Confirm Password:</label>
+		        <div id="confirmpass_img"></div>
+		        	<input name="r_confirmpass" id="confirmpass" type="password" maxlength="20" />
+		        <div id="confirmpass_msg"></div>
+		    </li>
+		    <li class="validated" id="dob_li">
+		        <label for="dob">date of birth:</label>
+		        <div id="dob_img"></div>
+		        	<input name="dob" id="dob" type="dob" maxlength="20"  />
+		        <div id="dob_msg"></div>
+		    </li>
+		    <li class="validated" id="email_li">
+		        <label for="email">email:</label>
+		        <div id="email_img"></div>
+		            <input name="email" id="email" type="email" maxlength="20"  />
+		        <div id="email_msg"></div>
+		    </li>
+	    </ul>	
+	</div>
+
+	<footer>
+		<div class = "container-fluid footer-flex">
+			<div class="footer-find-us">
+				<h5>nos encontrarás aquí</h5>
+				<ul>
+					<li>Avenida Dolça de Provença 20, nave 4</li>
+					<li>Torrelles de Llobregat</li>
+					<li>08629 - Barcelona</li>
+					<li>Tel: +34 936 891 500 | Fax: +34 936 890 077</li>
+					<li><a href="#">Aviso Legal</a></li>
+					<li><a href="#">Política de Cookies</a></li>
+				</ul>	
+			</div>
+			<div class="footer-social">
+				<h5>redes sociales</h5>
+				<ul>
+					<li><a href="#"><img src="img/facebook.png" width="50"	alt="Facebook"></a></li>
+					<li><a href="#"><img src="img/twitter.png" width="50"	alt="Twitter"></a></li>
+					<li><a href="#"><img src="img/instagram.png" width="50"	alt="Instagram"></a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

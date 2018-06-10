@@ -8,9 +8,8 @@
 	<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9KjyQD6ydID00HJbmLa3BBejq200LqCI&callback=myMap"></script>
+	<script type="text/javascript" src="js/ajax_js.js"></script>
 	<script type="text/javascript" src="js/home.js"></script>
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/val.js"></script>
 	<title>IDEstand</title>
 </head>
 <body>
@@ -46,44 +45,66 @@
 	</nav>
 	<div class="container">
 		<div id="mapFooter" class="contacto-maps"></div>
-
-		<ul class="form">
-			 <li class="validated" id="username_li">
-		       	<label for="r_username">Username:</label>
-		       	<div id="username_img"></div>
-		       		<input class="validated" name="username" id="username" type="text" maxlength="20" value=""  />
-		       	<div id="username_msg"></div>
-			</li>
-			<li class="validated" id="password_li">
-		       	<label for="r_password">Password:</label>
-		       	<div id="password_img"></div>
-		       		<input name="password" id="password" type="password" maxlength="20"  />
-		       	<div id="password_msg"></div>
-		 	</li>
-		    <li id="password_copy_li">
-		        your password is <input id="password_copy" />
-		    </li>
-		    <li id="confirmpass_li">
-		    	<label for="r_confirmpass">Confirm Password:</label>
-		        <div id="confirmpass_img"></div>
-		        	<input name="r_confirmpass" id="confirmpass" type="password" maxlength="20" />
-		        <div id="confirmpass_msg"></div>
-		    </li>
-		    <li class="validated" id="dob_li">
-		        <label for="dob">date of birth:</label>
-		        <div id="dob_img"></div>
-		        	<input name="dob" id="dob" type="dob" maxlength="20"  />
-		        <div id="dob_msg"></div>
-		    </li>
-		    <li class="validated" id="email_li">
-		        <label for="email">email:</label>
-		        <div id="email_img"></div>
-		            <input name="email" id="email" type="email" maxlength="20"  />
-		        <div id="email_msg"></div>
-		    </li>
-	    </ul>	
+		<form method="post">
+		  <div class="form-row">
+		    <div class="col-md-4 mb-3">
+		      <label for="nombre_contacto">Nombre</label>
+		      <input type="text" class="form-control" id="nombre_contacto" value="" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="apellido_contacto">Apellidos</label>
+		      <input type="text" class="form-control" id="apellido_contacto"  value="" required>
+		    </div>
+		    <div class="col-md-4 mb-3">
+		      <label for="email_contacto">email</label>
+		      <div class="input-group">
+		        <div class="input-group-prepend">
+		          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+		        </div>
+		        <input type="text" class="form-control" id="email_contacto" aria-describedby="inputGroupPrepend2" required>
+		      </div>
+		    </div>
+		  </div>
+		  <div class="form-row">
+		    <div class="col-md-6 mb-3">
+		      <label for="cargo_contacto">Cargo</label>
+		      <select class="form-control" id="cargo_contacto" required>
+		      	<option value="own`er">Apoderado</option>
+		      	<option value="executive_manager">Director ejecutivo</option>
+		      	<option value="ceo">Director de Operaciones</option>
+		      	<option value="project_manager">Jefe de Proyectos</option>
+		      </select>
+		    </div>
+		   <div class="col-md-6 mb-3"> 
+		      <fieldset>
+		      	 <legend><h5>Indica el motivo de tu consulta</h5></legend>
+		      	<div class="form-check check_form">
+		      		<input class="form-check-input" type="radio" name="exampleRadios" id="detalles_contacto" value="detalles" required>
+		      		<label class="form-check-label" for="requerimiento_contacto">Detalles sobre nuestros servicios</label>
+		      	</div>
+		      	<div class="form-check check_form">
+		      		<input class="form-check-input" type="radio" name="exampleRadios" id="presupuesto_contacto" value="presupuesto" required>
+		      		<label class="form-check-label" for="presupuesto_contacto">Propuesta y presupuesto</label>
+		      	</div>
+		      	<div class="form-check check_form">
+		      		<input class="form-check-input" type="radio" name="exampleRadios" id="otras_contacto" value="otras" required>
+		      		<label class="form-check-label" for="otras_contacto">Otras consultas</label>
+		      	</div>
+		      </fieldset>
+		    </div>
+		  <div class="form-group footer_form">
+		    <div class="form-check">
+		      <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+		      <label class="form-check-label" for="invalidCheck2">
+		         Acepto los términos de uso y condiciones
+		      </label>
+		    </div>
+		    <button class="btn btn-primary submit_form" id="enviarform">Enviar</button>
+		</div> 
+		</form>
+		</div>
 	</div>
-
+	<div class="alert alert-success" id="ajax_result" role="alert"></div>
 	<footer>
 		<div class = "container-fluid footer-flex">
 			<div class="footer-find-us">

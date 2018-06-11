@@ -32,5 +32,6 @@ $(document).ready(function(){
             else $("ajax_result").html("Error");
           }
         });
+      return false;
+      });
     });
-  });
